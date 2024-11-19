@@ -8,10 +8,10 @@
         <index-struct></index-struct>
       </el-tab-pane>
       <el-tab-pane label="模型训练">
-        <train-page v-if="activeTab === '1'"></train-page>
+        <train-page v-if="activeTab == 1"></train-page>
       </el-tab-pane>
       <el-tab-pane label="风险预测">
-        <predict-page v-if="activeTab === '2'"></predict-page>
+        <predict-page v-if="activeTab == 2"></predict-page>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -24,12 +24,12 @@ import PredictPage from "./predict/index.vue";
 
 import { ref } from "vue";
 
-import i18n from "../i18n/index";
+// import i18n from "../i18n/index";
 // const t = i18n()
 
 const activeTab = ref(0);
 
-const handleChange = (name) => {
+const handleChange = (name: any) => {
   activeTab.value = name;
 };
 </script>
@@ -49,6 +49,6 @@ const handleChange = (name) => {
 }
 
 :deep(.el-tabs__content) {
-    height: calc(100vh - 240px);
+  height: calc(100vh - 240px);
 }
 </style>

@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, watch} from "vue";
+import {ref, watch} from "vue";
 
 const props = defineProps({
   optName: {
@@ -24,7 +24,6 @@ const props = defineProps({
 
 const emits = defineEmits(['start', 'success']);
 
-// const blank = computed(()=>props.reset);
 const processing = ref(false);
 const percentage = ref(0);
 
@@ -36,7 +35,7 @@ const startProcess = () => {
 
 const load = () => {
   let n = 0;
-  let timer;
+  let timer: any;
   timer = setInterval(function () {
     n = (n + Math.random() * 10) | 0;
     if (n > 100) {

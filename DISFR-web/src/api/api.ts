@@ -3,7 +3,7 @@ import request from "../utils/request.js";
 const baseUrl = ''
 
 // 指标构建
-export const generateInd = (data) => {
+export const generateInd = (data: any) => {
   return request({
     url: baseUrl + "/generateInd",
     method: "post",
@@ -11,7 +11,7 @@ export const generateInd = (data) => {
   });
 }
 // 开始训练
-export const startTrain = (data) => {
+export const startTrain = (data: any) => {
   return request({
     url: baseUrl + "/train",
     method: "post",
@@ -19,7 +19,7 @@ export const startTrain = (data) => {
   });
 }
 // 预测
-export const startPredict = (data) => {
+export const startPredict = (data: any) => {
   return request({
     url: baseUrl + "/predict",
     method: "post",
@@ -28,7 +28,7 @@ export const startPredict = (data) => {
 }
 
 // 获取模型列表
-export const getModelsList = (data) => {
+export const getModelsList = () => {
   return request({
     url: baseUrl + '/getModelsList',
     method: "get"

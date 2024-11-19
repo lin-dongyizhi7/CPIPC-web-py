@@ -3,10 +3,7 @@ import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 
-import request from "./utils/request";
-
 import i18n from './i18n/index';
-import {Pinia} from 'pinia';
 
 import App from './App.vue';
 
